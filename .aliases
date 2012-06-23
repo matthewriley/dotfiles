@@ -5,12 +5,13 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
-alias p="cd ~/Projects"
-alias g="git"
+alias d="cd ~/Dropbox"
+alias p="cd ~/Dropbox/Projects"
+alias g="/usr/local/git/bin/git"
 alias v="vim"
 alias m="mate ."
 alias s="subl ."
+alias te="/Applications/TextEdit.app/Contents/MacOS/TextEdit"
 alias o="open"
 alias oo="open ."
 
@@ -35,7 +36,7 @@ fi
 alias sudo='sudo '
 
 # Get OS X Software Updates, update Homebrew itself, and upgrade installed Homebrew packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; rvm get stable; rvm gemset update; rvm rubygems latest; npm update -g'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"

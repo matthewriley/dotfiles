@@ -25,6 +25,12 @@ function server() {
 	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
 }
 
+# Start an HTTP server with python 3.x from a directory
+function server3() {
+	open "http://localhost:8000/"
+	/Library/Frameworks/Python.framework/Versions/3.2/bin/python3 -m http.server
+}
+
 # Get gzipped file size
 function gz() {
 	echo "orig size (bytes): "

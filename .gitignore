@@ -40,3 +40,7 @@ Desktop.ini
 .project
 .settings
 settings.xml
+
+# JetBrains generated #
+#######################
+.idea

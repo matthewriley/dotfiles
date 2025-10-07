@@ -25,13 +25,13 @@ for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null;
 done;
 
-# Add tab completion for many Bash commands
+# Add tab completion for many Bash commands; Added Homebrew paths
 if which brew &> /dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
 	# Ensure existing Homebrew v1 completions continue to work
 	export BASH_COMPLETION_COMPAT_DIR="$(brew --prefix)/etc/bash_completion.d";
 	source "$(brew --prefix)/etc/profile.d/bash_completion.sh";
-elif [ -f /etc/bash_completion ]; then
-	source /etc/bash_completion;
+elif [ -f /opt/homebrew/etc/bash_completion.d ]; then
+	source /opt/homebrew/etc/bash_completion.d;
 fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`

@@ -13,6 +13,7 @@ function doIt() {
 		--exclude "LICENSE-MIT.txt" \
 		--exclude ".vim/" \
 		--exclude "bin/" \
+		--exclude "init/" \
 		--exclude ".gvimrc" \
 		--exclude ".macos" \
 		--exclude ".project" \
